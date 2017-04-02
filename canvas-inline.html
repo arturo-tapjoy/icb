@@ -1,0 +1,52 @@
+<html>
+<head>
+  <title></title>
+  <style>
+  </style>
+</head>
+<body>
+  <h1></h1>
+  <div id="canvas-container"></div>
+  <script>
+    //grab the canvas and container
+    var cCon = document.getElementById("canvas-container");
+
+    var canvas = document.createElement("canvas"); // dynamacally create a canvas
+        canvas.id = "canvas";
+        canvas.width = "320";
+        canvas.height = "480";
+        canvas.position = 'relative';
+        cCon.appendChild(canvas);
+    var ctx = canvas.getContext("2d");
+
+    //update the logic
+    var update = function() {
+
+    };
+
+
+    //show the game on the screen
+    var draw = function() {
+      //clear the canvas
+      ctx.fillStyle = "#cdcdcd";
+      ctx.fillRect(0,0,canvas.width,canvas.height);
+
+
+    };
+
+    //gets executed multiple times per second
+    var step = function() {
+
+      update();
+      draw();
+
+      window.requestAnimationFrame(step);
+    };
+
+    //initial kick
+    step();
+
+  </script>
+  <script src="http://localhost:35729/livereload.js" charset="utf-8"></script>
+</body>
+</html>

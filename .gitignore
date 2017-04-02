@@ -1,0 +1,13 @@
+/log/*
+!/log/.keep
+/tmp
+/db
+/bin
+/lib
+/public
+/test
+/vendor
+/.idea/*
+.idea/
+*.DS_Store
+.DS_Store
